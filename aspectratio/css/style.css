@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+}
+
+.wrapper {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+#input {
+    width: 490px; 
+    display: inline-block;
+}
+
+.panel-settings {
+    margin-top: 1em;
+}
+
+#output { 
+    width: 560px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#input textarea,
+#generatedsavedatacontainer textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.odd_row {
+    background-color: #f9f9f9;
+}
+
+.col_change {
+    font-weight: bold;
+}
+
+#ancienttbl {
+    table-layout: fixed;
+}
+
+#ancienttbl td, #ancienttbl th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#ancienttbl .col1 {
+    width: 17%;
+}
+
+#ancienttbl .col2, .col3, .col5 {
+    width: 19%;
+}
+
+#ancienttbl .col4 {
+    width: 26%;
+}
+    
+table input[type=text] {
+    width: 100%;
+    padding: 0px;
+}
+
+#about .tab-pane {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px 0px 4px 4px;
+    padding: 15px;
+}
+
+.as-planner {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.as-planner table .col1 {
+    width: 25%;
+}
+
+.as-planner table .col2, .as-planner table .col3 {
+    width: 37.5%;
+}
+
+input {
+	width:40px
+}
