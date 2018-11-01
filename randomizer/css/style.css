@@ -1,0 +1,41 @@
+#wrapper{
+  height:100vh;
+  
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+
+  background-color:#69F0AE;
+  color: #F9FBE7;
+  
+  font-family: "Roboto","Lucida Console";
+  transition: 0.5s;
+  font-size: 5em;
+  font-weight:300;
+}
+
+#randomNumber{
+}
+
+input{
+  border: 0;
+  outline: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 2px;
+  background-color: inherit;
+  color: inherit;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
