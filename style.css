@@ -1,0 +1,110 @@
+
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+    color: #ebdbb2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+
+  main {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 310px;
+    transform: translateY(-100px);
+    text-align: center;
+  }
+
+  .time {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 4.5rem;
+    letter-spacing: 6px;
+  }
+
+
+  input{
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    padding: 12px;
+    transition: 0.5s;
+    border-radius: 2px;
+    background-color: inherit;
+    color: inherit;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: inherit;
+    text-align:center;
+  }
+
+  aside[data-toggled='true'] {
+    transform: translateX(0);
+  }
+
+  h1 {
+    line-height: 1rem;
+  }
+
+.main{
+	margin: 100px;
+}
+
+
+select, option{
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  background-color: inherit;
+  color: inherit;
+}
+
+
+ul{
+  list-style: none;
+  margin: 5;
+}
+.main li {
+  color: #fb3934;
+
+}
+.main li a:hover {
+  color: inherit;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+a {
+  color: #ebdbb2;
+  text-decoration: none;
+  display: block;
+  float: none;
+}
+
+li{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+   float   : left;
+   width   : 25%;
+   padding : 5px; /* this will be applied internally, due to 
+                      box-sizing property */
+
+}
+
