@@ -7,7 +7,7 @@ function generate() {
   document.getElementById("randomNumber").innerHTML = rand;
   
   if( rand > 60 ){
-    document.getElementById("wrapper").style.backgroundColor = "#69F0AE";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#69F0AE";
     if(rand == 100){
        document.getElementById("payment").innerHTML = '$' + document.getElementById("paid").value * 4.00;
     } else if(rand > 95){
@@ -21,6 +21,6 @@ function generate() {
     }
   } else {
     document.getElementById("payment").innerHTML = "$0";
-    document.getElementById("wrapper").style.backgroundColor = "#FF5252";
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#FF5252";
   }
 }

@@ -1,5 +1,9 @@
 body {
   background-color: #282828;
+  background-color:#69F0AE;
+  color: #F9FBE7;
+
+  transition: 0.5s;
 }
 
 #wrapper{
@@ -11,22 +15,18 @@ body {
   justify-content:center;
   position: relative;
 
-  background-color:#69F0AE;
-  color: #F9FBE7;
+  color: inherit;
   
   font-family: "Roboto","Lucida Console";
-  transition: 0.5s;
   font-size: 5em;
   font-weight:300;
 }
 
-#randomNumber{
-}
-
 input{
   border: 0;
+  border-bottom: 1px solid;
   outline: 0;
-  margin: 0;
+  margin: 10px;
   box-sizing: border-box;
   padding: 12px;
   border-radius: 2px;
