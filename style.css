@@ -1,5 +1,4 @@
-
-  body {
+body {
     position: absolute;
     top: 0;
     left: 0;
@@ -11,9 +10,9 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-  }
+}
 
-  main {
+main {
     position: absolute;
     top: 50%;
     right: 0;
@@ -22,17 +21,16 @@
     max-width: 310px;
     transform: translateY(-100px);
     text-align: center;
-  }
+}
 
-  .time {
+.time {
     display: block;
     margin-bottom: 20px;
     font-size: 4.5rem;
     letter-spacing: 6px;
-  }
+}
 
-
-  input{
+input{
     border: 0;
     outline: 0;
     -webkit-appearance: none;
@@ -47,20 +45,19 @@
     font-family: inherit;
     font-weight: inherit;
     text-align:center;
-  }
+}
 
-  aside[data-toggled='true'] {
+aside[data-toggled='true'] {
     transform: translateX(0);
-  }
+}
 
-  h1 {
+h1 {
     line-height: 1rem;
-  }
+}
 
 .main{
 	margin: 100px;
 }
-
 
 select, option{
   border: 0;
@@ -71,7 +68,6 @@ select, option{
   background-color: inherit;
   color: inherit;
 }
-
 
 ul{
   list-style: none;
@@ -109,6 +105,6 @@ li{
 }
 
 #thispage li {
-	width: 33%;
-	padding-top: 100px;
+	width: 25%;
+	padding-top: 200px;
 }
