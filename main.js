@@ -13,8 +13,26 @@ function handleKeyPress(e) {
     if (key == 13) {
         var text = document.getElementById("keywords").value;
         var e = getParameterByName('s');
-        if (e == 'g') {
-            window.location = "https://www.google.co.uk/search?q=" + text;
+        if (text[0] === ';'){
+            var option = text.substr(1,text.indexOf(' ')-1);
+            console.log(option.toLowerCase());
+            var subtext = text.substr(2 + option.length);
+            switch(option){
+                case "g":
+                    window.location = "https://www.google.com/search?q=" + subtext;
+                    break;
+                case "y":
+                    window.location = "https://www.youtube.com/search?q=" + subtext;
+                    break;
+                case "r":
+                    window.location = "https://duckduckgo.com/?q=site:reddit.com+" + subtext;
+                    break;
+                default:
+                    window.location = "https://duckduckgo.com/?q=" + subtext;
+                    break;
+            }
+        } else if (e == 'g') {
+            window.location = "https://www.google.com/search?q=" + text;
         } else {
             window.location = "https://duckduckgo.com/?q=" + text;
         }
