@@ -24,8 +24,17 @@ function handleKeyPress(e) {
                 case "y":
                     window.location = "https://www.youtube.com/search?q=" + subtext;
                     break;
-                case "r":
+                case "rs":
                     window.location = "https://duckduckgo.com/?q=site:reddit.com+" + subtext;
+                    break;
+                case "r":
+                    window.location = "reddit.com/r/" + subtext;
+                    break;
+                case "t":
+                    window.location = "https://twitch.tv/" + subtext;
+                    break;
+                case "m":
+                    window.location = "https://twitch.tv/moonmoon_ow";
                     break;
                 default:
                     window.location = "https://duckduckgo.com/?q=" + subtext;
