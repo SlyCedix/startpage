@@ -14,28 +14,46 @@ function handleKeyPress(e) {
         var text = document.getElementById("keywords").value;
         var e = getParameterByName('s');
         if (text[0] === ';'){
-            var option = text.substr(1,text.indexOf(' ')-1);
-            console.log(option.toLowerCase());
-            var subtext = text.substr(2 + option.length);
-            switch(option){
-                case "g":
-                    window.location = "https://www.google.com/search?q=" + subtext;
-                    break;
-                case "y":
-                    window.location = "https://www.youtube.com/search?q=" + subtext;
-                    break;
-                case "rs":
-                    window.location = "https://duckduckgo.com/?q=site:reddit.com+" + subtext;
-                    break;
-                case "r":
-                    window.location = "https://reddit.com/r/" + subtext;
-                    break;
-                case "t":
-                    window.location = "https://twitch.tv/" + subtext;
-                    break;
-                default:
-                    window.location = "https://duckduckgo.com/?q=" + subtext;
-                    break;
+            if(text.indexOf(' ') > -1){
+                var option = text.substr(1,text.indexOf(' ')-1);
+                var subtext = text.substr(2 + option.length);
+                switch(option){
+                    case "g":
+                        window.location = "https://www.google.com/search?q=" + subtext;
+                        break;
+                    case "y":
+                        window.location = "https://www.youtube.com/search?q=" + subtext;
+                        break;
+                    case "rs":
+                        window.location = "https://duckduckgo.com/?q=site:reddit.com+" + subtext;
+                        break;
+                    case "r":
+                        window.location = "https://reddit.com/r/" + subtext;
+                        break;
+                    case "t":
+                        window.location = "https://twitch.tv/" + subtext;
+                        break;
+                    default:
+                        window.location = "https://duckduckgo.com/?q=" + subtext;
+                        break;
+                }
+            } else {
+                var option = text.substr(1);
+                switch(option){
+                    case "g":
+                        window.location = "https://www.google.com/";
+                        break;
+                    case "y":
+                        window.location = "https://www.youtube.com/";
+                        break;
+                    case "r":
+                    case "rs":
+                        window.location = "https://reddit.com/";
+                        break;
+                    case "t":
+                        window.location = "https://twitch.tv/";
+                        break;
+                }
             }
         } else if (e == 'g') {
             window.location = "https://www.google.com/search?q=" + text;
