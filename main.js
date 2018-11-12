@@ -1,3 +1,6 @@
+var sindex = 0;
+var cycle = false;
+
 function start() {
     document.getElementById('keywords').focus();
 
@@ -9,7 +12,7 @@ function start() {
 function handleKeyPress(e) {
     var key = e.keyCode || e.which;
     var text = document.getElementById("keywords").value;
-    var option = text.substr(1,text.indexOf(' ')-1);
+    var option = text.substr(1,text.indexOf(' ')-1) || text.substr(1);
     var subtext = text.substr(2 + option.length);
     if (key == 13) {                                                        // Search functions
         if (text[0] === ';'){
@@ -62,17 +65,25 @@ function handleKeyPress(e) {
         if(text[0] === ';'){
             switch(option){
                 case 't':
-                    var streamers = ['moonmoon_ow', 'admiralbahroo', 'witwix'];
+                    var streamers = ['admiralbahroo', 'moonmoon_ow', 'witwix'];
+                    if(!subtext || cycle){
+                        cycle = true;
+                        if(sindex > streamers.length - 1) sindex = 0;
+                        document.getElementById("keywords").value = ';t ' + streamers[sindex++];
+                        return;
+                    }
                     for(var streamer of streamers){
-                        if(subtext && subtext === streamer.substr(0, subtext.length)){
+                        if(subtext === streamer.substr(0, subtext.length)){
                             document.getElementById("keywords").value = ';t ' + streamer;
-                            break;
+                            return;
                         }
                     }
                     break;
             }
         }
     }
+    sindex = 0;
+    cycle = false;
 }
 
 document.body.onkeyup = function(e) {                                       // Space to go to search bar
