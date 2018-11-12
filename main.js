@@ -4,7 +4,7 @@ var cycle = false;
 function start() {
     document.getElementById('keywords').focus();
 
-    window.setInterval(function() {
+    window.setInterval(function () {
         updatetime();
     }, 200);
 }
@@ -12,12 +12,12 @@ function start() {
 function handleKeyPress(e) {
     var key = e.keyCode || e.which;
     var text = document.getElementById("keywords").value;
-    var option = text.substr(1,text.indexOf(' ')-1) || text.substr(1);
+    var option = text.substr(1, text.indexOf(' ') - 1) || text.substr(1);
     var subtext = text.substr(2 + option.length);
-    if (key == 13) {                                                        // Search functions
-        if (text[0] === ';'){
-            if(text.indexOf(' ') > -1){
-                switch(option){
+    if (key == 13) { // Search functions
+        if (text[0] === ';') {
+            if (text.indexOf(' ') > -1) {
+                switch (option) {
                     case "g":
                         window.location = "https://www.google.com/search?q=" + subtext;
                         break;
@@ -39,7 +39,7 @@ function handleKeyPress(e) {
                 }
             } else {
                 var option = text.substr(1);
-                switch(option){
+                switch (option) {
                     case "g":
                         window.location = "https://www.google.com/";
                         break;
@@ -59,21 +59,21 @@ function handleKeyPress(e) {
             window.location = "https://duckduckgo.com/?q=" + text;
         }
     }
-    if (key == 9) {                                                         // Tab Completion Functions
+    if (key == 9) { // Tab Completion Functions
         e.preventDefault();
         e.stopPropagation();
-        if(text[0] === ';'){
-            switch(option){
+        if (text[0] === ';') {
+            switch (option) {
                 case 't':
                     var streamers = ['admiralbahroo', 'moonmoon_ow', 'witwix'];
-                    if(!subtext || cycle){
+                    if (!subtext || cycle) {
                         cycle = true;
-                        if(sindex > streamers.length - 1) sindex = 0;
+                        if (sindex > streamers.length - 1) sindex = 0;
                         document.getElementById("keywords").value = ';t ' + streamers[sindex++];
                         return;
                     }
-                    for(var streamer of streamers){
-                        if(subtext === streamer.substr(0, subtext.length)){
+                    for (var streamer of streamers) {
+                        if (subtext === streamer.substr(0, subtext.length)) {
                             document.getElementById("keywords").value = ';t ' + streamer;
                             return;
                         }
@@ -86,10 +86,10 @@ function handleKeyPress(e) {
     cycle = false;
 }
 
-document.body.onkeyup = function(e) {                                       // Space to go to search bar
+document.body.onkeyup = function (e) { // Space to go to search bar
     var text = document.getElementById("keywords").value;
-    var option = text.substr(0,text.indexOf(' ')-1);
-    if (e.keyCode == 32) document.getElementById("keywords").focus(); 
+    var option = text.substr(0, text.indexOf(' ') - 1);
+    if (e.keyCode == 32) document.getElementById("keywords").focus();
 
 }
 
