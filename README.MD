@@ -2,7 +2,7 @@
 
 ---
 
-Based on (Slate by torvim)[https://github.com/torvim/startpage/tree/master/startpages/slate]
+Based on [Slate by torvim](torvim/startpage/tree/master/startpages/slate)
 
 Available at https://slycedix.github.io/
 
