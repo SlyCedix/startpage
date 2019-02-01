@@ -3,7 +3,7 @@ var cycle = false;
 
 function start() {
     var query = getParameterByName('q');
-    if (query) search(query);
+    if (query) search(query.replace("+", "%2B"));
 
     document.getElementById('keywords').focus();
 
@@ -119,5 +119,5 @@ function getParameterByName(name, url) {
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace("+", "%2B").replace(/\+/g, " "));
+    return decodeURIComponent(results[2]);
 }
