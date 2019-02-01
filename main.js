@@ -14,7 +14,7 @@ function start() {
 
 function handleKeyPress(e) {
     var key = e.keyCode || e.which;
-    var text = document.getElementById("keywords").value;
+    var text = document.getElementById("keywords").value.replace("+", "%2B");
     var option = text.substr(1, text.indexOf(' ') - 1) || text.substr(1);
     var subtext = text.substr(2 + option.length);
     if (key == 13) { // Search functions
@@ -43,6 +43,9 @@ function handleKeyPress(e) {
             }
         }
     }
+    if(key == 32){ //Space to go to search
+        document.getElementById("keywords").focus();
+    }
     sindex = 0;
     cycle = false;
 }
@@ -69,6 +72,7 @@ function search(text) {
                     window.location = "https://twitch.tv/" + subtext;
                     break;
                 default:
+                    console.log(subtext)
                     window.location = "https://duckduckgo.com/?q=" + subtext;
                     break;
             }
@@ -95,13 +99,6 @@ function search(text) {
     }
 }
 
-document.body.onkeyup = function (e) { // Space to go to search bar
-    var text = document.getElementById("keywords").value;
-    var option = text.substr(0, text.indexOf(' ') - 1);
-    if (e.keyCode == 32) document.getElementById("keywords").focus();
-
-}
-
 function updatetime() {
     var d = new Date();
     var mins = String(d.getMinutes());
@@ -123,5 +120,5 @@ function getParameterByName(name, url) {
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    return decodeURIComponent(results[2].replace("+", "%2B").replace(/\+/g, " "));
 }
