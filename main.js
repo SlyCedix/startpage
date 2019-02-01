@@ -3,7 +3,7 @@ var cycle = false;
 
 function start() {
     var query = getParameterByName('q');
-    if (query) search(query.replace("+", "%2B"));
+    if (query) search(query.replaceAll("+", "%2B"));
 
     document.getElementById('keywords').focus();
 
@@ -14,7 +14,7 @@ function start() {
 
 function handleKeyPress(e) {
     var key = e.keyCode || e.which;
-    var text = document.getElementById("keywords").value.replace("+", "%2B");
+    var text = document.getElementById("keywords").value.replaceAll("+", "%2B");
     var option = text.substr(1, text.indexOf(' ') - 1) || text.substr(1);
     var subtext = text.substr(2 + option.length);
     if (key == 13) { // Search functions
