@@ -72,7 +72,6 @@ function search(text) {
                     window.location = "https://twitch.tv/" + subtext;
                     break;
                 default:
-                    console.log(subtext)
                     window.location = "https://duckduckgo.com/?q=" + subtext;
                     break;
             }
