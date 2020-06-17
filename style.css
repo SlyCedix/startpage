@@ -3,8 +3,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #202028;
+    color: #d5c0ac;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -80,7 +80,7 @@ ul{
   margin: 5;
 }
 .main li {
-  color: #fb3934;
+  color: #e1a793;
 
 }
 .main li a:hover {
@@ -92,7 +92,7 @@ ul{
 }
 
 a {
-  color: #ebdbb2;
+  color: #d5c0ac;
   text-decoration: none;
   display: block;
   float: none;
